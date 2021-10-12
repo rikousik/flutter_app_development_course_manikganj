@@ -4,30 +4,20 @@ class Human {
   final String gender;
 
   Human(this.name, this.age, this.gender);
-
-  void printIdentity() {
-    print("my name is $name, my age is $age, I am $gender");
+  void tellIdentity() {
+    print('My name is $name, I am $age years old,I am a $gender');
   }
 }
-
-class Student extends Human {
-  String dept;
-  int roll;
-  Student(this.dept, this.roll, String name, int age, String gender)
+class Athlete extends Human {
+  final String sports;
+  Athlete(String name, int age, String gender, this.sports)
       : super(name, age, gender);
 
-  void printStudentIdentity() {
-    print('Dept: $dept, roll: $roll');
+  void ability() {
+    print('I can play $sports');
   }
 }
-
 void main() {
-  Human rahim = Human('Rahim', 21, 'Male');
-  Human karim = Human('Karim,', 25, 'Male');
-
-  Student masum = Student('Science', 3, 'Masum', 19, 'Male');
-  Student nasima = Student('Commerce', 2, 'Nasima', 20, 'Female');
-
-  masum.printStudentIdentity();
-  masum.printIdentity();
+  Athlete kousik = Athlete('Kousik', 19, 'Male', 'Cricket');
+  print(kousik.sports);
 }
