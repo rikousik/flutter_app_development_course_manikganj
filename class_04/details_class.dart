@@ -1,28 +1,37 @@
 class Dokan {
   final String name;
   final int resellPrice;
-  final int wholeSalePrice;
+  final int wholesalePrice;
   int stock;
   int productSold = 0;
   int cashBox = 0;
 
-  Dokan(this.name, this.resellPrice, this.wholeSalePrice, this.stock);
+  Dokan(this.name, this.resellPrice, this.wholesalePrice, this.stock);
 
   void order(int quantity) {
     if (quantity <= stock) {
       int totalBill = quantity * resellPrice;
-      print('Your order placed successfully,please pay $totalBill.');
+      print(
+          'Order pleaced successfully, your bill is $totalBill taka for $quantity products');
+
+      stock = stock - quantity;
       productSold = productSold + quantity;
       cashBox = cashBox + totalBill;
-      stock = stock - quantity;
     } else {
       print('Sorry product is out of stock');
     }
   }
 
   void analyzeBusiness() {
-    int capital = productSold * wholeSalePrice;
-    print(
-        'Welcome to $name\nStock: $stock,\nYou have sold: $productSold,\nyour capital: $capital,\nyour current balance: $cashBox,\nYour profit: ${cashBox - capital}');
+    if (productSold > 0) {
+      int capital = productSold * wholesalePrice;
+      print('Welcome to $name');
+      print('stock: $stock');
+      print('sold: $productSold');
+      print('balance: $cashBox');
+      print('total profit: ${cashBox - capital}');
+    } else {
+      print('Sorry, you could not sell any product');
+    }
   }
 }
