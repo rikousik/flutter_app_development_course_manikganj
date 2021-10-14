@@ -7,13 +7,14 @@ class Customer {
   Customer(this.name, this.balance);
 
   void purchase(Dokan dkn, int quantity) {
-    final int bill = dkn.resellPrice * quantity;
-    if (bill <= balance) {
-      balance = balance - bill;
+    int bill = dkn.resellPrice * quantity;
+
+    if (bill <= balance && quantity <= dkn.stock) {
       dkn.order(quantity);
-      print('$name paid $bill');
+      balance = balance - bill;
+      print('$name paid $bill taka');
     } else {
-      print('You do not have sufficient balance');
+      print('Sorry you cannot buy this product');
     }
   }
 
