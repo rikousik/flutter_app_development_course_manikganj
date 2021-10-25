@@ -2,17 +2,14 @@ import 'customer_class.dart';
 import 'dokan_class.dart';
 
 void main() {
-  Dokan d1 = Dokan('Manikganj general store', 50, 30, 3);
-  Dokan d2 = Dokan('Dhamrai general store', 60, 30, 3);
+  Dokan d1 = Dokan('Manikganj general store', 50, 30, 10);
+  Dokan d2 = Dokan('Dhamrai general store', 60, 30, 20);
 
-  Customer cstm1 = Customer('Shawon', 100);
-  Customer cstm2 = Customer('Masum', 200);
+  Customer c1 = Customer('Rahim', 600);
+  Customer c2 = Customer('Karim', 100);
 
-  cstm1.purchase(d1, 1);
-  cstm1.checkBalance();
-  d1.analyzeBusiness();
+  c1.purchase(10, d1);
+  c2.purchase(1, d2);
 
-  cstm2.purchase(d2, 3);
-  cstm2.checkBalance();
   d2.analyzeBusiness();
 }

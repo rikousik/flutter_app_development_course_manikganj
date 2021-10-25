@@ -18,7 +18,7 @@ class Dokan {
       productSold = productSold + quantity;
       cashBox = cashBox + totalBill;
     } else {
-      print('Sorry product is out of stock');
+      print('Sorry product is out of stock, we have only $stock products');
     }
   }
 
