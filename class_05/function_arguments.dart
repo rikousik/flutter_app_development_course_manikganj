@@ -1,16 +1,17 @@
-void calculation(int a, int b) {
+sum(int a, int b) {
   int result = a + b;
-  print('result: $result');
+  print("result: $result");
 }
 
-void writeIdentity(String name,
-    {String education = 'n/a',
-    String occupation = 'n/a',
+writeIdentity(
+    {String name = 'N/A',
+    String occupation = 'N/A',
+    String education = 'N/A',
     int age = 0,
-    String bloodGroup = 'n/a'}) {
-  print("name: $name");
-  print("education: $education");
+    String bloodGroup = 'N/A'}) {
+  print('name: $name');
   print("occupation: $occupation");
-  print("age: $age");
-  print("bloodGroup: $bloodGroup");
+  print("education: $education");
+  print('age: $age');
+  print("blood group: $bloodGroup");
 }
