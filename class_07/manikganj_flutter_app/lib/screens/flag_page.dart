@@ -18,10 +18,25 @@ class _FlagPageState extends State<FlagPage> {
           width: 200,
           decoration:
               const BoxDecoration(color: Colors.red, shape: BoxShape.circle),
-          child: const Icon(
-            Icons.star,
-            color: Colors.yellow,
-            size: 50,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Icon(
+                Icons.star,
+                color: Colors.yellow,
+                size: 50,
+              ),
+              const Icon(
+                Icons.star,
+                color: Colors.yellow,
+                size: 50,
+              ),
+              const Icon(
+                Icons.star,
+                color: Colors.white,
+                size: 50,
+              ),
+            ],
           ),
         ),
       ),

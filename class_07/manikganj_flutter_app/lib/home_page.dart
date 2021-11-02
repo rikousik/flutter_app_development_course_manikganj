@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:manikganj_flutter_app/screens/column_page.dart';
 import 'package:manikganj_flutter_app/screens/flag_page.dart';
+import 'package:manikganj_flutter_app/screens/row_page.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key? key}) : super(key: key);
@@ -36,7 +37,13 @@ class _HomePageState extends State<HomePage> {
                   Navigator.of(context).push(
                       MaterialPageRoute(builder: (context) => ColumnPage()));
                 },
-                child: const Text('Column Page'))
+                child: const Text('Column Page')),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context)
+                      .push(MaterialPageRoute(builder: (context) => RowPage()));
+                },
+                child: const Text('Row Page'))
           ],
         ));
   }
