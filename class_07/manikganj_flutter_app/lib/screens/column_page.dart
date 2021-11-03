@@ -11,7 +11,8 @@ class ColumnPage extends StatelessWidget {
           width: double.infinity,
           color: Colors.black12,
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.end,
             children: const [
               Icon(
                 Icons.star,
