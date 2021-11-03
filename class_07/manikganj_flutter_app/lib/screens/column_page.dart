@@ -7,35 +7,20 @@ class ColumnPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Column(
-          mainAxisSize: MainAxisSize.max,
-          mainAxisAlignment: MainAxisAlignment.end,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Container(
-              color: Colors.black,
-              height: 2,
-              width: double.infinity,
-            ),
-            Icon(
-              Icons.book,
-              size: 60,
-            ),
-            SizedBox(
-              height: 50,
-            ),
-            Icon(
-              Icons.account_balance,
-              size: 60,
-            ),
-            SizedBox(
-              height: 100,
-            ),
-            Icon(
-              Icons.ac_unit,
-              size: 60,
-            )
-          ],
+        child: Container(
+          width: double.infinity,
+          color: Colors.black12,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: const [
+              Icon(
+                Icons.star,
+                size: 60,
+              ),
+              Icon(Icons.polymer, size: 60),
+              Icon(Icons.check_box_outline_blank_outlined, size: 60)
+            ],
+          ),
         ),
       ),
     );

@@ -1,36 +1,25 @@
 import 'package:flutter/material.dart';
 
-class RowPage extends StatefulWidget {
-  RowPage({Key? key}) : super(key: key);
+class RowPage extends StatelessWidget {
+  const RowPage({Key? key}) : super(key: key);
 
-  @override
-  _RowPageState createState() => _RowPageState();
-}
-
-class _RowPageState extends State<RowPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
         child: Container(
+          height: double.infinity,
           color: Colors.black12,
-          height: 300,
           child: Row(
-            crossAxisAlignment: CrossAxisAlignment.end,
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: const [
               Icon(
-                Icons.book,
+                Icons.star,
                 size: 60,
               ),
-              Icon(
-                Icons.account_balance,
-                size: 60,
-              ),
-              Icon(
-                Icons.ac_unit,
-                size: 60,
-              )
+              Icon(Icons.polymer, size: 60),
+              Icon(Icons.check_box_outline_blank_outlined, size: 60)
             ],
           ),
         ),

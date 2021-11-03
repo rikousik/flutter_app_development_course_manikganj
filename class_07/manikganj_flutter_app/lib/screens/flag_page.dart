@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class FlagPage extends StatefulWidget {
-  FlagPage({Key? key}) : super(key: key);
+  const FlagPage({Key? key}) : super(key: key);
 
   @override
   _FlagPageState createState() => _FlagPageState();
@@ -18,25 +18,10 @@ class _FlagPageState extends State<FlagPage> {
           width: 200,
           decoration:
               const BoxDecoration(color: Colors.red, shape: BoxShape.circle),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              const Icon(
-                Icons.star,
-                color: Colors.yellow,
-                size: 50,
-              ),
-              const Icon(
-                Icons.star,
-                color: Colors.yellow,
-                size: 50,
-              ),
-              const Icon(
-                Icons.star,
-                color: Colors.white,
-                size: 50,
-              ),
-            ],
+          child: const Icon(
+            Icons.star,
+            color: Colors.yellow,
+            size: 50,
           ),
         ),
       ),
