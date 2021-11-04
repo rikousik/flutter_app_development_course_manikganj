@@ -12,7 +12,7 @@ class _FlagPageState extends State<FlagPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Flag page'),
+        title: const Text('Flag page'),
       ),
       backgroundColor: Colors.green,
       body: Center(
@@ -22,10 +22,11 @@ class _FlagPageState extends State<FlagPage> {
           decoration:
               const BoxDecoration(color: Colors.red, shape: BoxShape.circle),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Row(
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: const [
                   Icon(
                     Icons.star,
@@ -44,7 +45,7 @@ class _FlagPageState extends State<FlagPage> {
                   ),
                 ],
               ),
-              Text(
+              const Text(
                 'This is very good',
                 style: TextStyle(color: Colors.white, fontSize: 20),
               )

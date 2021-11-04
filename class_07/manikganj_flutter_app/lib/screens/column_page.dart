@@ -12,7 +12,7 @@ class ColumnPage extends StatelessWidget {
           color: Colors.black12,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.end,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: const [
               Icon(
                 Icons.star,

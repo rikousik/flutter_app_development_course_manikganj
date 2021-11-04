@@ -11,7 +11,7 @@ class RowPage extends StatelessWidget {
           height: double.infinity,
           color: Colors.black12,
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: const [
               Icon(
