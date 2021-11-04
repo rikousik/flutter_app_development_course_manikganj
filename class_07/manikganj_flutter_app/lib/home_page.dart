@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:manikganj_flutter_app/screens/column_page.dart';
 import 'package:manikganj_flutter_app/screens/flag_page.dart';
-import 'package:manikganj_flutter_app/screens/news_page.dart';
+import 'package:manikganj_flutter_app/screens/news_paper.dart';
 import 'package:manikganj_flutter_app/screens/row_page.dart';
 
 class HomePage extends StatefulWidget {
@@ -42,7 +42,7 @@ class _HomePageState extends State<HomePage> {
             ElevatedButton(
                 onPressed: () {
                   Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => const NewsPage()));
+                      builder: (context) => const NewsPaper()));
                 },
                 child: const Text('News page')),
           ],
