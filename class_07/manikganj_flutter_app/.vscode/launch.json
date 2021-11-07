@@ -10,6 +10,15 @@
             "type": "dart"
         },
         {
+            "name": "manikganj_flutter_app_web",
+            "request": "launch",
+            "type": "dart",
+            "args": [
+                "--web-renderer",
+                "html"
+            ]
+        },
+        {
             "name": "manikganj_flutter_app (profile mode)",
             "request": "launch",
             "type": "dart",

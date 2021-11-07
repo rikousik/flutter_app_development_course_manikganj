@@ -1,52 +1,50 @@
 import 'package:flutter/material.dart';
+import 'package:manikganj_flutter_app/screens/advance_news_paper.dart';
 import 'package:manikganj_flutter_app/screens/column_page.dart';
 import 'package:manikganj_flutter_app/screens/flag_page.dart';
 import 'package:manikganj_flutter_app/screens/news_paper.dart';
 import 'package:manikganj_flutter_app/screens/row_page.dart';
 
-class HomePage extends StatefulWidget {
+class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
 
   @override
-  _HomePageState createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("Home Page"),
-      ),
-      body: Center(
-        child: Column(
-          children: [
-            ElevatedButton(
-                onPressed: () {
-                  Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => const FlagPage()));
-                },
-                child: const Text('Flag page')),
-            ElevatedButton(
-                onPressed: () {
-                  Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => const ColumnPage()));
-                },
-                child: const Text('Column page')),
-            ElevatedButton(
-                onPressed: () {
-                  Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => const RowPage()));
-                },
-                child: const Text('Row page')),
-            ElevatedButton(
-                onPressed: () {
-                  Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => const NewsPaper()));
-                },
-                child: const Text('News page')),
-          ],
-        ),
+      body: Container(
+        width: double.infinity,
+        child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+          ElevatedButton(
+              onPressed: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (context) => RowPage()));
+              },
+              child: Text('Row page')),
+          ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => ColumnPage()));
+              },
+              child: Text('Column page')),
+          ElevatedButton(
+              onPressed: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (context) => FlagPage()));
+              },
+              child: Text('Flag page')),
+          ElevatedButton(
+              onPressed: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (context) => NewsPaper()));
+              },
+              child: Text('News paper')),
+          ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => AdvanceNewsPaper()));
+              },
+              child: Text('Advance News paper'))
+        ]),
       ),
     );
   }
