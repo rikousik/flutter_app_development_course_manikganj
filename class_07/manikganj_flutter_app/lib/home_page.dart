@@ -11,7 +11,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
+      body: SizedBox(
         width: double.infinity,
         child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
           ElevatedButton(
@@ -43,7 +43,7 @@ class HomePage extends StatelessWidget {
                 Navigator.of(context).push(MaterialPageRoute(
                     builder: (context) => AdvanceNewsPaper()));
               },
-              child: Text('Advance News paper'))
+              child: Text('Advance News paper')),
         ]),
       ),
     );
