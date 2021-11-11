@@ -35,7 +35,23 @@ class AdvanceNewsPaper extends StatelessWidget {
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 15),
-                child: Image.network(newsData.imageLink),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Image.network(
+                      newsData.imageLink,
+                      width: 100,
+                    ),
+                    Image.network(
+                      newsData.imageLink,
+                      width: 100,
+                    ),
+                    Image.network(
+                      newsData.imageLink,
+                      width: 100,
+                    ),
+                  ],
+                ),
               ),
               Text(
                 newsData.aboutImage,

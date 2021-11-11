@@ -4,6 +4,7 @@ import 'package:manikganj_flutter_app/screens/advance_news_paper.dart';
 import 'package:manikganj_flutter_app/screens/column_page.dart';
 import 'package:manikganj_flutter_app/screens/flag_page.dart';
 import 'package:manikganj_flutter_app/screens/news_paper.dart';
+import 'package:manikganj_flutter_app/screens/product_page.dart';
 import 'package:manikganj_flutter_app/screens/row_page.dart';
 
 class HomePage extends StatelessWidget {
@@ -143,8 +144,14 @@ That does not mean there is no mystery weapon. In fact, thinking back on the Mos
                     MaterialPageRoute(builder: (context) => const NewsPaper()));
               },
               child: const Text('News paper')),
+          ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => const ProductPage()));
+              },
+              child: const Text('Product Page')),
           Container(
-            padding: EdgeInsets.all(10),
+            padding: const EdgeInsets.all(10),
             color: Colors.yellow,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -154,19 +161,19 @@ That does not mean there is no mystery weapon. In fact, thinking back on the Mos
                       Navigator.of(context).push(MaterialPageRoute(
                           builder: (context) => AdvanceNewsPaper(news1)));
                     },
-                    child: Text("news 1")),
+                    child: const Text("news 1")),
                 TextButton(
                     onPressed: () {
                       Navigator.of(context).push(MaterialPageRoute(
                           builder: (context) => AdvanceNewsPaper(news2)));
                     },
-                    child: Text("news 2")),
+                    child: const Text("news 2")),
                 TextButton(
                     onPressed: () {
                       Navigator.of(context).push(MaterialPageRoute(
                           builder: (context) => AdvanceNewsPaper(news3)));
                     },
-                    child: Text("news 3"))
+                    child: const Text("news 3"))
               ],
             ),
           )
