@@ -146,8 +146,8 @@ That does not mean there is no mystery weapon. In fact, thinking back on the Mos
               child: const Text('News paper')),
           ElevatedButton(
               onPressed: () {
-                Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => const ProductPage()));
+                Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => ProductPage()));
               },
               child: const Text('Product Page')),
           Container(
