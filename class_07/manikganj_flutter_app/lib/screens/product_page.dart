@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:manikganj_flutter_app/main.dart';
 
 class ProductPage extends StatefulWidget {
-  ProductPage({Key? key}) : super(key: key);
+  const ProductPage({Key? key}) : super(key: key);
 
   @override
   State<ProductPage> createState() => _ProductPageState();
@@ -36,8 +36,8 @@ class _ProductPageState extends State<ProductPage> {
                         ? Colors.black
                         : Colors.grey,
                 icon: dimLightOn
-                    ? Icon(Icons.light_mode_rounded)
-                    : Icon(Icons.light_mode_outlined)),
+                    ? const Icon(Icons.light_mode_rounded)
+                    : const Icon(Icons.light_mode_outlined)),
             Switch(
                 value: dimLightOn,
                 onChanged: (bool value) {
@@ -58,8 +58,8 @@ class _ProductPageState extends State<ProductPage> {
                         ? Colors.black
                         : Colors.grey,
                 icon: dimLightOn
-                    ? Icon(Icons.lightbulb)
-                    : Icon(Icons.lightbulb_outline)),
+                    ? const Icon(Icons.lightbulb)
+                    : const Icon(Icons.lightbulb_outline)),
           ]),
         ),
       ),
