@@ -6,6 +6,7 @@ import 'package:manikganj_flutter_app/screens/flag_page.dart';
 import 'package:manikganj_flutter_app/screens/news_paper.dart';
 import 'package:manikganj_flutter_app/screens/product_page.dart';
 import 'package:manikganj_flutter_app/screens/row_page.dart';
+import 'package:manikganj_flutter_app/screens/stateful_2.dart';
 import 'package:manikganj_flutter_app/screens/stateful_stateless.dart';
 
 class HomePage extends StatelessWidget {
@@ -157,6 +158,12 @@ That does not mean there is no mystery weapon. In fact, thinking back on the Mos
                     .push(MaterialPageRoute(builder: (context) => TestPage()));
               },
               child: const Text('State Page')),
+          ElevatedButton(
+              onPressed: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (context) => Stateful2()));
+              },
+              child: const Text('State Page 2')),
           Container(
             padding: const EdgeInsets.all(10),
             color: Colors.yellow,
