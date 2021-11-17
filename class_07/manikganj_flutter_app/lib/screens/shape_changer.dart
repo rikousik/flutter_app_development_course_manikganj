@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class Stateful2 extends StatefulWidget {
-  Stateful2({Key? key}) : super(key: key);
+class ShapeChanger extends StatefulWidget {
+  ShapeChanger({Key? key}) : super(key: key);
 
   @override
-  _Stateful2State createState() => _Stateful2State();
+  _ShapeChangerState createState() => _ShapeChangerState();
 }
 
-class _Stateful2State extends State<Stateful2> {
+class _ShapeChangerState extends State<ShapeChanger> {
   bool isRectangle = true;
 
   @override
@@ -23,16 +23,18 @@ class _Stateful2State extends State<Stateful2> {
                 width: 100,
                 margin: const EdgeInsets.only(bottom: 50),
                 decoration: BoxDecoration(
-                    color: isRectangle ? Colors.green : Colors.orange,
-                    shape: isRectangle ? BoxShape.rectangle : BoxShape.circle),
+                  color: isRectangle ? Colors.green : Colors.orange,
+                  shape: isRectangle ? BoxShape.rectangle : BoxShape.circle,
+                ),
               ),
               ElevatedButton(
                   onPressed: () {
                     setState(() {
                       isRectangle = !isRectangle;
+                      print(isRectangle);
                     });
                   },
-                  child: Text("change shape"))
+                  child: Text("Tap to change shape"))
             ],
           )),
     );

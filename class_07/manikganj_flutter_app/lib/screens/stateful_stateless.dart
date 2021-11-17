@@ -40,6 +40,7 @@ class _TestPageState extends State<TestPage> {
                     onChanged: (bool value) {
                       setState(() {
                         dimLighOn = value;
+                        roomColorOn = !value;
                       });
                     }),
                 IconButton(
