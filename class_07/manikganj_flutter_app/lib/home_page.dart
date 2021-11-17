@@ -163,7 +163,7 @@ That does not mean there is no mystery weapon. In fact, thinking back on the Mos
                 Navigator.of(context)
                     .push(MaterialPageRoute(builder: (context) => Stateful2()));
               },
-              child: const Text('State Page 2')),
+              child: const Text('State 2 Page')),
           Container(
             padding: const EdgeInsets.all(10),
             color: Colors.yellow,

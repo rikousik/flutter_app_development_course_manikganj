@@ -14,32 +14,27 @@ class _Stateful2State extends State<Stateful2> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SizedBox(
-        width: double.infinity,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Container(
+          width: double.infinity,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
                 height: 100,
                 width: 100,
-                margin: EdgeInsets.only(bottom: 50),
+                margin: const EdgeInsets.only(bottom: 50),
                 decoration: BoxDecoration(
                     color: isRectangle ? Colors.green : Colors.orange,
-                    shape: isRectangle ? BoxShape.rectangle : BoxShape.circle)),
-            ElevatedButton(
-                onPressed: () {
-                  setState(() {
-                    if (isRectangle == true) {
-                      isRectangle = false;
-                    } else {
-                      isRectangle = true;
-                    }
-                    print(isRectangle);
-                  });
-                },
-                child: const Text("Press to change  the shape"))
-          ],
-        ),
-      ),
+                    shape: isRectangle ? BoxShape.rectangle : BoxShape.circle),
+              ),
+              ElevatedButton(
+                  onPressed: () {
+                    setState(() {
+                      isRectangle = !isRectangle;
+                    });
+                  },
+                  child: Text("change shape"))
+            ],
+          )),
     );
   }
 }
