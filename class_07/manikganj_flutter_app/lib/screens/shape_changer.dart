@@ -21,20 +21,18 @@ class _ShapeChangerState extends State<ShapeChanger> {
               Container(
                 height: 100,
                 width: 100,
-                margin: const EdgeInsets.only(bottom: 50),
+                margin: EdgeInsets.only(bottom: 50),
                 decoration: BoxDecoration(
-                  color: isRectangle ? Colors.green : Colors.orange,
-                  shape: isRectangle ? BoxShape.rectangle : BoxShape.circle,
-                ),
+                    color: isRectangle ? Colors.green : Colors.orange,
+                    shape: isRectangle ? BoxShape.rectangle : BoxShape.circle),
               ),
               ElevatedButton(
                   onPressed: () {
                     setState(() {
                       isRectangle = !isRectangle;
-                      print(isRectangle);
                     });
                   },
-                  child: Text("Tap to change shape"))
+                  child: Text("Change shape"))
             ],
           )),
     );
