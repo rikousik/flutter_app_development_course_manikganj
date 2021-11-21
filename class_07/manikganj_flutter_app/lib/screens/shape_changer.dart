@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:manikganj_flutter_app/widgets/product_tile.dart';
+import 'package:manikganj_flutter_app/widgets/product_card.dart';
 
 class ShapeChanger extends StatefulWidget {
   ShapeChanger({Key? key}) : super(key: key);
@@ -20,7 +20,7 @@ class _ShapeChangerState extends State<ShapeChanger> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              ProductTile(),
+              ProductCard(),
               Container(
                 height: 100,
                 width: 100,
