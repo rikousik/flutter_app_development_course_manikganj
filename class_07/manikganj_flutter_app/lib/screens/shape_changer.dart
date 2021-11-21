@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:manikganj_flutter_app/widgets/product_tile.dart';
 
 class ShapeChanger extends StatefulWidget {
   ShapeChanger({Key? key}) : super(key: key);
@@ -13,15 +14,17 @@ class _ShapeChangerState extends State<ShapeChanger> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey.shade200,
       body: SizedBox(
           width: double.infinity,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              ProductTile(),
               Container(
                 height: 100,
                 width: 100,
-                margin: EdgeInsets.only(bottom: 50),
+                margin: const EdgeInsets.symmetric(vertical: 50),
                 decoration: BoxDecoration(
                     color: isRectangle ? Colors.green : Colors.orange,
                     shape: isRectangle ? BoxShape.rectangle : BoxShape.circle),
