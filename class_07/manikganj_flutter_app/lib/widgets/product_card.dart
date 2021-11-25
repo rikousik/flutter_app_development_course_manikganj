@@ -1,7 +1,10 @@
+import 'dart:ui';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
+import 'package:flutter/widgets.dart';
 
 class ProductCard extends StatelessWidget {
   const ProductCard({Key? key}) : super(key: key);
@@ -9,64 +12,73 @@ class ProductCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 250,
-      padding: const EdgeInsets.all(5),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(10),
-        color: Colors.white,
-      ),
+      width: 200,
+      margin: EdgeInsets.all(10),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Container(
-            height: 140,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                image: const DecorationImage(
-                    image: NetworkImage(
-                        'https://i.etsystatic.com/19311499/r/il/b4be61/1839533908/il_794xN.1839533908_lgk6.jpg'),
-                    fit: BoxFit.cover)),
+          Image.network(
+              "https://i.etsystatic.com/11956550/r/il/f52c62/3473559131/il_794xN.3473559131_9yw8.jpg"),
+          const Text(
+            "Designer bags for cristmas",
+            style: TextStyle(fontSize: 20),
           ),
           const Text(
-            "Anniversary Gift for him",
-            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+            "DARAZ",
+            style: TextStyle(fontSize: 18, color: Colors.grey),
           ),
           Row(
             children: const [
               Icon(
                 Icons.star,
-                size: 14,
+                color: Colors.black,
+                size: 15,
               ),
-              Icon(Icons.star, size: 14),
-              Icon(Icons.star, size: 14),
-              Icon(Icons.star, size: 14),
-              Icon(Icons.star, size: 14),
-              Text("(18,500)")
+              Icon(
+                Icons.star,
+                color: Colors.black,
+                size: 15,
+              ),
+              Icon(
+                Icons.star,
+                color: Colors.black,
+                size: 15,
+              ),
+              Icon(
+                Icons.star,
+                color: Colors.black,
+                size: 15,
+              ),
+              Icon(
+                Icons.star,
+                color: Colors.black,
+                size: 15,
+              ),
+              Text(
+                "(5,490)",
+                style: TextStyle(color: Colors.black),
+              )
             ],
           ),
           Row(
             children: const [
               Text(
-                "USD 29.99",
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-              ),
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: 2),
-                child: Text(
-                  "USD 74.97",
-                  style: TextStyle(
-                      fontWeight: FontWeight.w500,
-                      decoration: TextDecoration.lineThrough,
-                      color: Colors.green),
-                ),
+                "USD 2.45",
+                style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
               ),
               Text(
-                "(60% off)",
-                style:
-                    TextStyle(fontWeight: FontWeight.w500, color: Colors.green),
+                "USD 3.50",
+                style: TextStyle(
+                    fontSize: 15,
+                    color: Colors.green,
+                    decoration: TextDecoration.lineThrough),
+              ),
+              Text(
+                " (30% off)",
+                style: TextStyle(fontSize: 15, color: Colors.green),
               ),
             ],
-          )
+          ),
         ],
       ),
     );

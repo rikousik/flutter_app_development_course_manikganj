@@ -4,6 +4,7 @@ import 'package:manikganj_flutter_app/screens/advance_news_paper.dart';
 import 'package:manikganj_flutter_app/screens/column_page.dart';
 import 'package:manikganj_flutter_app/screens/flag_page.dart';
 import 'package:manikganj_flutter_app/screens/news_paper.dart';
+import 'package:manikganj_flutter_app/screens/perfume_details.dart';
 import 'package:manikganj_flutter_app/screens/product_page.dart';
 import 'package:manikganj_flutter_app/screens/row_page.dart';
 import 'package:manikganj_flutter_app/screens/shape_changer.dart';
@@ -164,6 +165,12 @@ That does not mean there is no mystery weapon. In fact, thinking back on the Mos
                     MaterialPageRoute(builder: (context) => ShapeChanger()));
               },
               child: const Text('Shape Changer Page')),
+          ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => PerfumeDetails()));
+              },
+              child: const Text('Perfume Details Page')),
           Container(
             padding: const EdgeInsets.all(10),
             color: Colors.yellow,

@@ -1,5 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:manikganj_flutter_app/main.dart';
+import 'package:manikganj_flutter_app/widgets/product_card.dart';
 
 class ProductPage extends StatefulWidget {
   const ProductPage({Key? key}) : super(key: key);
@@ -9,77 +10,51 @@ class ProductPage extends StatefulWidget {
 }
 
 class _ProductPageState extends State<ProductPage> {
-  bool mainLightOn = true;
-
-  bool dimLightOn = false;
-
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        backgroundColor: mainLightOn ? Colors.white : Colors.black,
-        body: Container(
-          height: double.infinity,
-          color: Colors.black12,
-          child:
-              Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
+    return Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.white,
+          leading: const Padding(
+            padding: EdgeInsets.only(top: 12, left: 5),
+            child: Text(
+              'Etsy',
+              style: TextStyle(color: Colors.red, fontSize: 25),
+            ),
+          ),
+          centerTitle: true,
+          title: Container(
+            height: 50,
+            width: 250,
+            padding: const EdgeInsets.symmetric(horizontal: 5),
+            decoration: BoxDecoration(
+                color: Colors.grey.shade300,
+                borderRadius: BorderRadius.circular(30),
+                border: Border.all(color: Colors.black, width: 2)),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: const [
+                Text(
+                  'Search for anything',
+                  style: TextStyle(color: Colors.grey),
+                ),
+                Icon(Icons.search, color: Colors.grey)
+              ],
+            ),
+          ),
+          actions: [
             IconButton(
-                onPressed: () {
-                  setState(() {
-                    mainLightOn = false;
-                  });
-                },
-                iconSize: 50,
-                color: dimLightOn
-                    ? Colors.amber.shade700
-                    : mainLightOn
-                        ? Colors.black
-                        : Colors.grey,
-                icon: dimLightOn
-                    ? const Icon(Icons.light_mode_rounded)
-                    : const Icon(Icons.light_mode_outlined)),
-            Switch(
-                value: dimLightOn,
-                onChanged: (bool value) {
-                  setState(() {
-                    dimLightOn = value;
-                  });
-                }),
+                onPressed: () {},
+                color: Colors.black,
+                icon: const Icon(Icons.person_outline)),
             IconButton(
-                onPressed: () {
-                  setState(() {
-                    mainLightOn = true;
-                  });
-                },
-                iconSize: 50,
-                color: dimLightOn
-                    ? Colors.amber.shade700
-                    : mainLightOn
-                        ? Colors.black
-                        : Colors.grey,
-                icon: dimLightOn
-                    ? const Icon(Icons.lightbulb)
-                    : const Icon(Icons.lightbulb_outline)),
-          ]),
+                onPressed: () {},
+                color: Colors.black,
+                icon: const Icon(Icons.shopping_cart_outlined))
+          ],
         ),
-      ),
-    );
+        body: Column(
+          children: const [ProductCard()],
+        ));
   }
 }
-
-
-
-
-/*
-
-if(dimLisght ){
-  color = Colors.yellow;
-}else{
-  color = Colors.black;
-}
-
-
-dimlight?Colors.yellow : Colors.black
-
-
-*/
