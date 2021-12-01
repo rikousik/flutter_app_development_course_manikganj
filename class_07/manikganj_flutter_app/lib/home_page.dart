@@ -3,6 +3,7 @@ import 'package:manikganj_flutter_app/data/news_paper_class.dart';
 import 'package:manikganj_flutter_app/screens/advance_news_paper.dart';
 import 'package:manikganj_flutter_app/screens/column_page.dart';
 import 'package:manikganj_flutter_app/screens/flag_page.dart';
+import 'package:manikganj_flutter_app/screens/login_page.dart';
 import 'package:manikganj_flutter_app/screens/news_paper.dart';
 import 'package:manikganj_flutter_app/screens/perfume_details.dart';
 import 'package:manikganj_flutter_app/screens/product_page.dart';
@@ -123,6 +124,12 @@ That does not mean there is no mystery weapon. In fact, thinking back on the Mos
       body: SizedBox(
         width: double.infinity,
         child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+          ElevatedButton(
+              onPressed: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (context) => LoginPage()));
+              },
+              child: const Text('Login page')),
           ElevatedButton(
               onPressed: () {
                 Navigator.of(context).push(
