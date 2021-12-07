@@ -6,7 +6,8 @@ import 'package:manikganj_flutter_app/screens/dashboard.dart';
 import 'package:manikganj_flutter_app/screens/flag_page.dart';
 import 'package:manikganj_flutter_app/screens/login_page.dart';
 import 'package:manikganj_flutter_app/screens/news_paper.dart';
-import 'package:manikganj_flutter_app/screens/perfume_details.dart';
+import 'package:manikganj_flutter_app/screens/perfume/landing_page.dart';
+import 'package:manikganj_flutter_app/screens/perfume/perfume_details.dart';
 import 'package:manikganj_flutter_app/screens/product_page.dart';
 import 'package:manikganj_flutter_app/screens/row_page.dart';
 import 'package:manikganj_flutter_app/screens/shape_changer.dart';
@@ -182,7 +183,7 @@ That does not mean there is no mystery weapon. In fact, thinking back on the Mos
           ElevatedButton(
               onPressed: () {
                 Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => PerfumeDetails()));
+                    MaterialPageRoute(builder: (context) => LandingPage()));
               },
               child: const Text('Perfume Details Page')),
           Container(
