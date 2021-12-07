@@ -46,7 +46,9 @@ class _LoginPageState extends State<LoginPage> {
                   //   });
                   // }
                 },
-                child: const Text('Login')),
+                child: const Text(
+                  'Login',
+                )),
             const SizedBox(
               height: 30,
             ),
